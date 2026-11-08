@@ -1,0 +1,467 @@
+frase,categoria,subcategoria
+que horas são,INFORMACIONAL,STATUS_SISTEMA
+me mostra minha agenda,INFORMACIONAL,DADOS_PESSOAIS
+vê se o docker tá rodando,INFORMACIONAL,STATUS_SISTEMA
+qual a previsão do tempo,INFORMACIONAL,CONSULTA_EXTERNA
+como tá o trânsito agora,INFORMACIONAL,CONSULTA_EXTERNA
+quantos emails eu tenho,INFORMACIONAL,DADOS_PESSOAIS
+me diz a hora,INFORMACIONAL,STATUS_SISTEMA
+pedro alvares cabral morreu quando?,INFORMACIONAL,CONSULTA_EXTERNA
+tá chovendo aqui?,INFORMACIONAL,CONSULTA_EXTERNA
+qual meu próximo compromisso,INFORMACIONAL,DADOS_PESSOAIS
+o que eu tenho marcado pra hoje,INFORMACIONAL,DADOS_PESSOAIS
+qual meu próximo compromisso,INFORMACIONAL,DADOS_PESSOAIS
+tá chovendo lá fora?,INFORMACIONAL,CONSULTA_EXTERNA
+docker tá rodando?,INFORMACIONAL,STATUS_SISTEMA
+me diz a cotação do dólar,INFORMACIONAL,CONSULTA_EXTERNA
+q dia eh hoje,INFORMACIONAL,STATUS_SISTEMA
+como tá o wifi,INFORMACIONAL,STATUS_SISTEMA
+qual a senha do wifi?,INFORMACIONAL,DADOS_PESSOAIS
+que dia é hoje,INFORMACIONAL,STATUS_SISTEMA
+me fala o dia por inteiro,INFORMACIONAL,STATUS_SISTEMA
+me fala o dia por extenso,INFORMACIONAL,STATUS_SISTEMA
+vc sabe que horas são,INFORMACIONAL,STATUS_SISTEMA
+q horas são?,INFORMACIONAL,STATUS_SISTEMA
+qual a previsão pra hoje,INFORMACIONAL,CONSULTA_EXTERNA
+me vê o status do servidor,INFORMACIONAL,STATUS_SISTEMA
+onde fica a rua Augusta,INFORMACIONAL,CONSULTA_EXTERNA
+"meu, que horas fecham o banco?",INFORMACIONAL,CONSULTA_EXTERNA
+tá funcionando o sistema de login deles?,INFORMACIONAL,CONSULTA_EXTERNA
+tá funcionando o meu sistema login?,INFORMACIONAL,CONSULTA_EXTERNA
+qual o CEP do centro de SP,INFORMACIONAL,CONSULTA_EXTERNA
+vc consegue me falar a temperatura agora?,INFORMACIONAL,CONSULTA_EXTERNA
+quanto tá o dólar hoje?,INFORMACIONAL,CONSULTA_EXTERNA
+me diz se tem reunião às 15h,INFORMACIONAL,DADOS_PESSOAIS
+qual o significado de idempotência,INFORMACIONAL,CONSULTA_EXTERNA
+tá on o banco de dados?,INFORMACIONAL,STATUS_SISTEMA
+que horas começa o jogo?,INFORMACIONAL,STATUS_SISTEMA
+vc sabe onde fica o shopping Iguatemi?,INFORMACIONAL,CONSULTA_EXTERNA
+"mano, qual a previsão do tempo pra amanhã?",INFORMACIONAL,CONSULTA_EXTERNA
+qual o status da API de pagamentos deles,INFORMACIONAL,STATUS_SISTEMA
+qual o status da API de pagamentos do meu sistema,INFORMACIONAL,STATUS_SISTEMA
+"o deles, tá caindo o servidor de produção?",INFORMACIONAL,STATUS_SISTEMA
+"o meu servidor, tá caindo? o de produção?",INFORMACIONAL,STATUS_SISTEMA
+me diz a definição de webhook,INFORMACIONAL,CONSULTA_EXTERNA
+vê se tem evento na agenda hoje,INFORMACIONAL,DADOS_PESSOAIS
+qual o IP da máquina de staging?,INFORMACIONAL,STATUS_SISTEMA
+que horas são em Tóquio agora,INFORMACIONAL,CONSULTA_EXTERNA
+"mano, o container do Node tá rodando?",INFORMACIONAL,STATUS_SISTEMA
+vc sabe me dizer a cotação do euro?,INFORMACIONAL,CONSULTA_EXTERNA
+qual a temperatura em São Paulo neste momento,INFORMACIONAL,CONSULTA_EXTERNA
+me diz se o serviço de e-mail está ativo,INFORMACIONAL,STATUS_SISTEMA
+onde fica a avenida Paulista em relação à Consolação,INFORMACIONAL,CONSULTA_EXTERNA
+tá funcionando o sistema de autenticação de dois fatores,INFORMACIONAL,STATUS_SISTEMA
+"mano, qual o próximo feriado nacional no Brasil?",INFORMACIONAL,CONSULTA_EXTERNA
+vc consegue ver se tem alguma notificação nova pra mim,INFORMACIONAL,DADOS_PESSOAIS
+qual o significado do termo pipeline no contexto de DevOps,INFORMACIONAL,CONSULTA_EXTERNA
+que horas são em Lisboa,INFORMACIONAL,CONSULTA_EXTERNA
+me diz se o Docker Compose tá com todos os serviços up,INFORMACIONAL,STATUS_SISTEMA
+vc sabe qual a previsão de chuva pra essa semana em São Paulo,INFORMACIONAL,CONSULTA_EXTERNA
+qual o status atual do deploy da versão 2.3.1,INFORMACIONAL,STATUS_SISTEMA
+onde fica o datacenter da DigitalOcean que hospeda nosso app,INFORMACIONAL,CONSULTA_EXTERNA
+tá com latência alta o banco de dados hoje?,INFORMACIONAL,STATUS_SISTEMA
+"mano, vê se tem algum alerta crítico no sistema agora?",INFORMACIONAL,STATUS_SISTEMA
+vc sabe me informar qual o fuso horário de Nova York?,INFORMACIONAL,CONSULTA_EXTERNA
+qual a definição de endpoint em APIs REST,INFORMACIONAL,CONSULTA_EXTERNA
+que horas começa e termina o horário comercial em Brasília,INFORMACIONAL,CONSULTA_EXTERNA
+me diz se o certificado SSL do domínio vai vencer em breve,INFORMACIONAL,STATUS_SISTEMA
+vc consegue me falar a temperatura máxima e mínima de hoje em Campinas,INFORMACIONAL,CONSULTA_EXTERNA
+qual o status dos pods no Kubernetes do ambiente de produção,INFORMACIONAL,STATUS_SISTEMA
+onde fica a região de hospedagem chamada sfo3 na DigitalOcean?,INFORMACIONAL,CONSULTA_EXTERNA
+tá com erro 503 o load balancer desde cedo,INFORMACIONAL,STATUS_SISTEMA
+"mano, vê se tem reunião marcada comigo e com a equipe de backend hoje à tarde",INFORMACIONAL,DADOS_PESSOAIS
+vc sabe me dizer qual a versão mais recente do Node.js LTS lançada este mês,INFORMACIONAL,CONSULTA_EXTERNA
+o ceu eh que cor?,INFORMACIONAL,CONSULTA_EXTERNA
+qual a versão do Java que a gente usa?,INFORMACIONAL,STATUS_SISTEMA
+o deploy de ontem deu certo?,INFORMACIONAL,CONSULTA_EXTERNA
+qual a versão do Ruby que tá rodando?,INFORMACIONAL,STATUS_SISTEMA
+minha bola eh que cor?,INFORMACIONAL,DADOS_PESSOAIS
+meu saldo ainda é o mesmo de ontem?,INFORMACIONAL,DADOS_PESSOAIS
+quantos usuários estão logados agora?,INFORMACIONAL,STATUS_SISTEMA
+o que significa esse erro 500 no log?,INFORMACIONAL,STATUS_SISTEMA
+qual o endpoint da API de usuários?,INFORMACIONAL,STATUS_SISTEMA
+essa tarefa foi concluída ou ainda está pendente?,INFORMACIONAL,DADOS_PESSOAIS
+quem era o responsável por aquela entrega?,INFORMACIONAL,CONSULTA_EXTERNA
+o que significa esse log de erro?,INFORMACIONAL,STATUS_SISTEMA
+qual a versão do Python que tá rodando?,INFORMACIONAL,STATUS_SISTEMA
+o que significa esse status code 404?,INFORMACIONAL,STATUS_SISTEMA
+qual a versão do Node que tá rodando?,INFORMACIONAL,STATUS_SISTEMA
+o que significa esse erro de timeout?,INFORMACIONAL,STATUS_SISTEMA
+qual a versão do PHP que tá rodando?,INFORMACIONAL,STATUS_SISTEMA
+tá de sacanagem comigo,INFORMACIONAL,CONSULTA_EXTERNA
+cadê aquele arquivo que eu salvei semana passada,INFORMACIONAL,DADOS_PESSOAIS
+isso que você fez agora foi o quê exatamente,INFORMACIONAL,HISTORICO
+quanto tempo falta pra reunião que você marcou,INFORMACIONAL,DADOS_PESSOAIS
+o docker tá de pé ainda ou caiu de novo,INFORMACIONAL,STATUS_SISTEMA
+isso aí que apareceu na tela é erro?,INFORMACIONAL,STATUS_SISTEMA
+verifique se o meu pc ta ligado,INFORMACIONAL,STATUS_SISTEMA
+meu pc ta ligado?,INFORMACIONAL,STATUS_SISTEMA
+você conseguiu achar o que eu pedi ontem,INFORMACIONAL,HISTORICO
+será que eu tô certo sobre isso,INFORMACIONAL,HISTORICO
+quanto já rodou desse processo até agora,INFORMACIONAL,STATUS_SISTEMA
+"aquilo que a gente discutiu ontem, tinha ficado resolvido?",INFORMACIONAL,HISTORICO
+isso que tá piscando aí é sinal de quê,INFORMACIONAL,STATUS_SISTEMA
+o que ficou definido naquela reunião mesmo,INFORMACIONAL,HISTORICO
+essa versão nova já tá valendo ou ainda não,INFORMACIONAL,STATUS_SISTEMA
+sobrou alguma coisa pendente da lista de hoje,INFORMACIONAL,DADOS_PESSOAIS
+quanto isso costuma custar em média,INFORMACIONAL,CONSULTA_EXTERNA
+o que tinha de errado com o último envio,INFORMACIONAL,HISTORICO
+por que as pessoas são tão complicadas?,INFORMACIONAL,CONSULTA_EXTERNA
+será que eu devia ter feito diferente?,INFORMACIONAL,HISTORICO
+"opa, tudo bem?",INFORMACIONAL,STATUS_SISTEMA
+cê tá aí?,INFORMACIONAL,STATUS_SISTEMA
+o banco tá com lentidão ou é a rede?,INFORMACIONAL,STATUS_SISTEMA
+qual o prazo final pra subir essa feature?,INFORMACIONAL,DADOS_PESSOAIS
+o que foi decidido na daily de ontem?,INFORMACIONAL,HISTORICO
+quantos commits foram feitos hoje?,INFORMACIONAL,STATUS_SISTEMA
+quantos commits foram feitos hoje? olhe isso no github,INFORMACIONAL,CONSULTA_EXTERNA
+confira se o github está no ar,INFORMACIONAL,CONSULTA_EXTERNA
+github me de meu link do github,INFORMACIONAL,DADOS_PESSOAIS
+ve se subiu o último commit no github,INFORMACIONAL,CONSULTA_EXTERNA
+existe PR aberto pra essa branch?,INFORMACIONAL,CONSULTA_EXTERNA
+existe PR aberto?,INFORMACIONAL,CONSULTA_EXTERNA
+qual a diferença entre PUT e PATCH,INFORMACIONAL,CONSULTA_EXTERNA
+qual a diferença entre PUT e PATCH nessa API?,INFORMACIONAL,CONSULTA_EXTERNA
+o certificado SSL foi renovado automaticamente?,INFORMACIONAL,STATUS_SISTEMA
+essa alteração afeta a produção?,INFORMACIONAL,STATUS_SISTEMA
+"que isso, mano",INFORMACIONAL,HISTORICO
+"calma aí, deixa eu pensar",TRANSACIONAL,EXECUTAR
+abre o chrome,TRANSACIONAL,EXECUTAR
+cria um novo repositório no GitHub,TRANSACIONAL,CRIAR
+domingo a gente um compromisso,TRANSACIONAL,CRIAR
+agende um compromisso,TRANSACIONAL,CRIAR
+marque para mim,TRANSACIONAL,CRIAR
+agenda um compromisso,TRANSACIONAL,CRIAR
+crie um compromisso,TRANSACIONAL,CRIAR
+marque um compromisso,TRANSACIONAL,CRIAR
+ria uma anotaçao simples,TRANSACIONAL,CRIAR
+faça uma anotação,TRANSACIONAL,CRIAR
+crie um .md,TRANSACIONAL,CRIAR
+faça um md,TRANSACIONAL,CRIAR
+anote em um md,TRANSACIONAL,CRIAR
+faça uma nota para mim,TRANSACIONAL,CRIAR
+faça uma nota em markdown,TRANSACIONAL,CRIAR
+faça uma anotação em markdown,TRANSACIONAL,CRIAR
+preciso que voce faça uma anotação pra mim em um bloco de notas,TRANSACIONAL,CRIAR
+crie um arquivo markdown,TRANSACIONAL,CRIAR
+deleta todas as branches antigas,TRANSACIONAL,DELETAR
+muda a senha do ambiente de staging,TRANSACIONAL,ATUALIZAR
+sobe esse container com a nova imagem,TRANSACIONAL,EXECUTAR
+cancela aquela tarefa do Jira,TRANSACIONAL,DELETAR
+renomeia esse arquivo pra final_v2,TRANSACIONAL,ATUALIZAR
+ativa o modo manutenção no servidor,TRANSACIONAL,EXECUTAR
+faz o rollback da última versão,TRANSACIONAL,EXECUTAR
+baixa esse vídeo e salva na pasta Downloads,TRANSACIONAL,EXECUTAR
+reprograma a reunião para quarta,TRANSACIONAL,EXECUTAR
+compartilha essa tela com o time,TRANSACIONAL,EXECUTAR
+inativa esse usuário no sistema,TRANSACIONAL,ATUALIZAR
+adiciona mais dois pods no Kubernetes,TRANSACIONAL,CRIAR
+libera acesso pro novo funcionário,TRANSACIONAL,ATUALIZAR
+trava a fila de processamento agora,TRANSACIONAL,ATUALIZAR
+agenda uma manutenção preventiva,TRANSACIONAL,CRIAR
+copia esse diretório pro backup,TRANSACIONAL,CRIAR
+anote meu pedido,TRANSACIONAL,CRIAR
+faça uma nota,TRANSACIONAL,CRIAR
+produza uma nota,TRANSACIONAL,CRIAR
+faca uma nota,TRANSACIONAL,CRIAR
+anote para mim,TRANSACIONAL,CRIAR
+anota ai pfv,TRANSACIONAL,CRIAR
+vc tem q fazer uma anotação,TRANSACIONAL,CRIAR
+crie para mim uma nota,TRANSACIONAL,CRIAR
+estou precisando de uma nota,TRANSACIONAL,CRIAR
+preciso de uma nota,TRANSACIONAL,CRIAR
+vc tem q fazer uma nota pra mim,TRANSACIONAL,CRIAR
+anota q eu preciso comer legumes,TRANSACIONAL,CRIAR
+preciso q vc faça uma anota,TRANSACIONAL,CRIAR
+anota q minha vi é linda,TRANSACIONAL,CRIAR
+anote ai q a minha vi é linda,TRANSACIONAL,CRIAR
+zera o cache do CloudFront,TRANSACIONAL,EXECUTAR
+configura o webhook com a nova URL,TRANSACIONAL,ATUALIZAR
+roda o script de migração do banco,TRANSACIONAL,EXECUTAR
+apaga essa informação,TRANSACIONAL,DELETAR
+bora tirar esse acesso da conta antiga,TRANSACIONAL,DELETAR
+envia esse arquivo pro meu email,TRANSACIONAL,EXECUTAR
+cria uma anotação,TRANSACIONAL,CRIAR
+"Escreve aí: reestruturar todo o plano de marketing da empresa... na verdade, o urgente é só aprovar a verba para os anúncios do Instagram",TRANSACIONAL,CRIAR
+"Colocar na lista: comprar roupas novas para o evento... quer dizer, deixa eu ver o que já tenho no armário primeiro",TRANSACIONAL,CRIAR
+"Anotar: parar de gastar dinheiro... não, não é isso, preciso controlar os gastos com delivery este mês",TRANSACIONAL,CRIAR
+"Lembrar de consertar a lâmpada, a torneira e o armário... não, foca em uma coisa: chamar o eletricista nesta semana",TRANSACIONAL,CRIAR
+"Escrever: comprar organizadores para o quarto... pensando bem, preciso primeiro jogar fora o que não uso antes de comprar tralha",TRANSACIONAL,CRIAR
+"Anotar que preciso faxinar a casa inteira no sábado... não, melhor não, preciso arrumar só a gaveta de roupas que tá um caos",TRANSACIONAL,CRIAR
+"Lembrar de estudar programação por 4 horas... não, impossível, anota aí estudar focado por 30 minutos sem olhar o celular",TRANSACIONAL,CRIAR
+"Colocar na lista: acordar às 5h para render mais... não, bobagem, preciso é dormir mais cedo para acordar descansado",TRANSACIONAL,CRIAR
+"Escrever que preciso limpar minha caixa de entrada... não, quer dizer, preciso responder os e-mails urgentes do chefe",TRANSACIONAL,CRIAR
+"Lembrar de cortar o doce... não, na verdade é só diminuir o açúcar no café da tarde",TRANSACIONAL,CRIAR
+faz um rabisco pra mim,TRANSACIONAL,CRIAR
+"Anotar que tenho que terminar o relatório hoje... não, mentira, o prazo é terça, preciso adiantar a introdução hoje",TRANSACIONAL,CRIAR
+"Marcar que preciso beber 3 litros de água... espera, melhor colocar andar sempre com a garrafinha cheia para não esquecer",TRANSACIONAL,CRIAR
+"Anotar que preciso comer frutas... não, quer dizer, preciso comer melhor e incluir mais variedade",TRANSACIONAL,CRIAR
+"para com isso, sério",TRANSACIONAL,EXECUTAR
+marca uma reunião pra amanhã,TRANSACIONAL,CRIAR
+"Colocar aí: começar a correr amanhã... risca isso, melhor focar em fazer qualquer exercício pelo menos 3 vezes na semana",TRANSACIONAL,CRIAR
+desliga a luz da sala,TRANSACIONAL,EXECUTAR
+salva esse link,TRANSACIONAL,EXECUTAR
+deleta esse arquivo,TRANSACIONAL,DELETAR
+manda mensagem pro meu chefe,TRANSACIONAL,EXECUTAR
+fecha esse programa,TRANSACIONAL,EXECUTAR
+manda um oi pra ana,TRANSACIONAL,EXECUTAR
+manda um salve pra vi,TRANSACIONAL,EXECUTAR
+cria um lembrete agora,TRANSACIONAL,CRIAR
+Cria um .txt vazio,TRANSACIONAL,CRIAR
+Gere um arquivo .md em branco para minhas notas,TRANSACIONAL,CRIAR
+apaga essa nota velha,TRANSACIONAL,DELETAR
+salva esse link aqui,TRANSACIONAL,EXECUTAR
+liga a luz da sala,TRANSACIONAL,EXECUTAR
+desliga o pc agora,TRANSACIONAL,EXECUTAR
+marca reunião amanhã às 15h,TRANSACIONAL,CRIAR
+marca que domingo a gente vai sair,TRANSACIONAL,CRIAR
+envia o relatório pro chefe,TRANSACIONAL,EXECUTAR
+exclui o arquivo duplicado,TRANSACIONAL,DELETAR
+para com isso,TRANSACIONAL,EXECUTAR
+esquece o que eu disse,TRANSACIONAL,EXECUTAR
+abre o vscode pra mim,TRANSACIONAL,EXECUTAR
+fecha essa aba inútil,TRANSACIONAL,EXECUTAR
+cria evento no google calendar,TRANSACIONAL,CRIAR
+manda mensagem pro grupo da família,TRANSACIONAL,EXECUTAR
+salva o rascunho como pdf,TRANSACIONAL,CRIAR
+liga o ar condicionado,TRANSACIONAL,EXECUTAR
+desliga o alarme das sete,TRANSACIONAL,EXECUTAR
+marca consulta com dentista semana que vem,TRANSACIONAL,CRIAR
+envia convite pra galera do churrasco,TRANSACIONAL,EXECUTAR
+apaga todas as notificações antigas,TRANSACIONAL,DELETAR
+abre o spotify e toca algo,TRANSACIONAL,EXECUTAR
+cria nova pasta chamada projetos 2026,TRANSACIONAL,CRIAR
+manda o arquivo pra maria até hoje,TRANSACIONAL,EXECUTAR
+salva esse vídeo nos favoritos,TRANSACIONAL,EXECUTAR
+liga a tv da sala,TRANSACIONAL,EXECUTAR
+desliga o wi-fi do quarto,TRANSACIONAL,EXECUTAR
+marca horário no salão pra sábado,TRANSACIONAL,CRIAR
+envia print da tela pro suporte,TRANSACIONAL,EXECUTAR
+exclui conta antiga do twitter,TRANSACIONAL,DELETAR
+abre terminal e roda o script,TRANSACIONAL,EXECUTAR
+fecha o programa travado,TRANSACIONAL,EXECUTAR
+cria lembrete de pagar boleto amanhã,TRANSACIONAL,CRIAR
+manda áudio explicando o bug,TRANSACIONAL,EXECUTAR
+salva contato novo no whatsapp,TRANSACIONAL,CRIAR
+liga a cafeteira agora,TRANSACIONAL,EXECUTAR
+desliga notificação de e-mail,TRANSACIONAL,EXECUTAR
+marca jantar com amigos no sexta,TRANSACIONAL,CRIAR
+envia currículo pra vaga de dev,TRANSACIONAL,EXECUTAR
+apaga histórico de navegação recente,TRANSACIONAL,DELETAR
+abre planilha de gastos do mês,TRANSACIONAL,EXECUTAR
+cria anotação sobre ideias do projeto,TRANSACIONAL,CRIAR
+manda link da doc pro estagiário,TRANSACIONAL,EXECUTAR
+salva imagem no drive compartilhado,TRANSACIONAL,CRIAR
+liga roteador de backup,TRANSACIONAL,EXECUTAR
+desliga microondas depois de dois minutos,TRANSACIONAL,EXECUTAR
+marca reunião de alinhamento toda segunda,TRANSACIONAL,CRIAR
+envia feedback pro time de design,TRANSACIONAL,EXECUTAR
+exclui rascunho de e-mail não enviado,TRANSACIONAL,DELETAR
+abre aplicativo de banco e mostra saldo,TRANSACIONAL,EXECUTAR
+fecha todas as janelas do navegador,TRANSACIONAL,EXECUTAR
+cria evento de aniversário da mãe,TRANSACIONAL,CRIAR
+manda mensagem de feliz aniversário,TRANSACIONAL,EXECUTAR
+salva senha nova no gerenciador,TRANSACIONAL,CRIAR
+liga luz do corredor,TRANSACIONAL,EXECUTAR
+"muda de assunto, por favor",TRANSACIONAL,EXECUTAR
+desliga computador depois de salvar tudo,TRANSACIONAL,EXECUTAR
+marca consulta médica pra próxima quinta,TRANSACIONAL,CRIAR
+envia proposta comercial pro cliente,TRANSACIONAL,EXECUTAR
+apaga arquivo temporário da pasta downloads,TRANSACIONAL,DELETAR
+marque uma anotacao pra eu fazer um teste amanha,TRANSACIONAL,CRIAR
+será que dava pra você tirar essa notificação daí,TRANSACIONAL,EXECUTAR
+seria legal você já ir preparando o relatório,TRANSACIONAL,EXECUTAR
+seria interessante isso ir direto pro meu email,TRANSACIONAL,EXECUTAR
+dá pra fazer isso sumir da tela,TRANSACIONAL,EXECUTAR
+"quando puder, tira essa aba aí",TRANSACIONAL,EXECUTAR
+já pode ir subindo isso pro servidor,TRANSACIONAL,EXECUTAR
+tira isso daqui e bota lá,TRANSACIONAL,EXECUTAR
+"some com isso da sua cabeça, esquece",TRANSACIONAL,EXECUTAR
+deixa quieto isso que eu falei antes,TRANSACIONAL,EXECUTAR
+adianta esse envio pra mim,TRANSACIONAL,EXECUTAR
+me conta uma história pra dormir,TRANSACIONAL,EXECUTAR
+esquece o que eu falei,TRANSACIONAL,DELETAR
+para de falar,TRANSACIONAL,EXECUTAR
+passa isso pra frente pro time,TRANSACIONAL,EXECUTAR
+bota isso em espera até segunda,TRANSACIONAL,EXECUTAR
+eu não tava falando sério agora há pouco,TRANSACIONAL,EXECUTAR
+bom dia,ENGAJAMENTO,SAUDACAO
+bom dia karen,ENGAJAMENTO,SAUDACAO
+ótimo dia,ENGAJAMENTO,SAUDACAO
+boa tarde,ENGAJAMENTO,SAUDACAO
+boa tarde karen,ENGAJAMENTO,SAUDACAO
+ótima tarde,ENGAJAMENTO,SAUDACAO
+boa noite,ENGAJAMENTO,SAUDACAO
+boa noite karen,ENGAJAMENTO,SAUDACAO
+ótima noite,ENGAJAMENTO,SAUDACAO
+oi,ENGAJAMENTO,SAUDACAO
+olá,ENGAJAMENTO,SAUDACAO
+oi karen,ENGAJAMENTO,SAUDACAO
+olá karen,ENGAJAMENTO,SAUDACAO
+e aí,ENGAJAMENTO,SAUDACAO
+e aí karen,ENGAJAMENTO,SAUDACAO
+opa,ENGAJAMENTO,SAUDACAO
+opa karen,ENGAJAMENTO,SAUDACAO
+salve,ENGAJAMENTO,SAUDACAO
+salve karen,ENGAJAMENTO,SAUDACAO
+fala,ENGAJAMENTO,SAUDACAO
+fala aí,ENGAJAMENTO,SAUDACAO
+fala comigo,ENGAJAMENTO,SAUDACAO
+fala tu,ENGAJAMENTO,SAUDACAO
+fala fiote,ENGAJAMENTO,SAUDACAO
+boa boa fi?,ENGAJAMENTO,SAUDACAO
+coé karen,ENGAJAMENTO,SAUDACAO
+karen,ENGAJAMENTO,SAUDACAO
+ei karen,ENGAJAMENTO,SAUDACAO
+karen tá aí?,ENGAJAMENTO,SAUDACAO
+tá aí karen?,ENGAJAMENTO,SAUDACAO
+tá aí?,ENGAJAMENTO,SAUDACAO
+vc tá aí?,ENGAJAMENTO,SAUDACAO
+cê tá aí?,ENGAJAMENTO,SAUDACAO
+"mano, vc tá aí?",ENGAJAMENTO,SAUDACAO
+"vc tá aí, mano?",ENGAJAMENTO,SAUDACAO
+karen na escuta?,ENGAJAMENTO,SAUDACAO
+tá na escuta?,ENGAJAMENTO,SAUDACAO
+acorda karen,ENGAJAMENTO,SAUDACAO
+alô karen,ENGAJAMENTO,SAUDACAO
+tudo bem?,ENGAJAMENTO,SAUDACAO
+tudo bem karen?,ENGAJAMENTO,SAUDACAO
+tudo bem com você?,ENGAJAMENTO,SAUDACAO
+como você tá?,ENGAJAMENTO,SAUDACAO
+como você está hoje?,ENGAJAMENTO,SAUDACAO
+como vai?,ENGAJAMENTO,SAUDACAO
+como cê tá?,ENGAJAMENTO,SAUDACAO
+beleza?,ENGAJAMENTO,SAUDACAO
+tudo em cima?,ENGAJAMENTO,SAUDACAO
+tudo certo?,ENGAJAMENTO,SAUDACAO
+como estão as coisas?,ENGAJAMENTO,SAUDACAO
+tranquilo por aí?,ENGAJAMENTO,SAUDACAO
+obrigado,ENGAJAMENTO,SAUDACAO
+obrigado karen,ENGAJAMENTO,SAUDACAO
+muito obrigado,ENGAJAMENTO,SAUDACAO
+valeu,ENGAJAMENTO,SAUDACAO
+valeu karen,ENGAJAMENTO,SAUDACAO
+valeu demais,ENGAJAMENTO,SAUDACAO
+obrigadão,ENGAJAMENTO,SAUDACAO
+agradeço a ajuda,ENGAJAMENTO,SAUDACAO
+valeu pela força,ENGAJAMENTO,SAUDACAO
+gratidão,ENGAJAMENTO,SAUDACAO
+tchau,ENGAJAMENTO,SAUDACAO
+tchau karen,ENGAJAMENTO,SAUDACAO
+até mais,ENGAJAMENTO,SAUDACAO
+até logo,ENGAJAMENTO,SAUDACAO
+até amanhã,ENGAJAMENTO,SAUDACAO
+falou,ENGAJAMENTO,SAUDACAO
+falou karen,ENGAJAMENTO,SAUDACAO
+fui,ENGAJAMENTO,SAUDACAO
+até a próxima,ENGAJAMENTO,SAUDACAO
+boa noite vou dormir,ENGAJAMENTO,SAUDACAO
+estou muito mal hoje,ENGAJAMENTO,EXPRESSÃO
+tô cansado pra caramba,ENGAJAMENTO,EXPRESSÃO
+que isso cara,ENGAJAMENTO,EXPRESSÃO
+sério mesmo,ENGAJAMENTO,EXPRESSÃO
+tô mal,ENGAJAMENTO,EXPRESSÃO
+hoje foi puxado,ENGAJAMENTO,EXPRESSÃO
+tô meio pra baixo,ENGAJAMENTO,EXPRESSÃO
+cada um com seus problemas,ENGAJAMENTO,EXPRESSÃO
+tô cansado demais,ENGAJAMENTO,EXPRESSÃO
+estou me sentindo bem,ENGAJAMENTO,EXPRESSÃO
+estou um pouco ansioso,ENGAJAMENTO,EXPRESSÃO
+hoje não foi fácil,ENGAJAMENTO,EXPRESSÃO
+"nossa, que situação",ENGAJAMENTO,EXPRESSÃO
+tudo bem por aqui,ENGAJAMENTO,EXPRESSÃO
+tô me sentindo meio sobrecarregado hoje,ENGAJAMENTO,EXPRESSÃO
+"cara, hoje foi um dia bem complicado pra mim",ENGAJAMENTO,EXPRESSÃO
+"nossa, que coisa mais estranha de se ouvir",ENGAJAMENTO,EXPRESSÃO
+"tô meio pra baixo, mas vou ficando por aqui",ENGAJAMENTO,EXPRESSÃO
+estou me sentindo bastante cansado após o trabalho,ENGAJAMENTO,EXPRESSÃO
+hoje realmente não foi um dos meus melhores dias,ENGAJAMENTO,EXPRESSÃO
+"nossa, nunca imaginei que ouviria algo assim de você",ENGAJAMENTO,EXPRESSÃO
+"estou precisando desabafar sobre algumas coisas que me incomodam",ENGAJAMENTO,EXPRESSÃO
+"nossa, não esperava essa reação de você",ENGAJAMENTO,EXPRESSÃO
+não acredito que isso aconteceu,ENGAJAMENTO,EXPRESSÃO
+acho que hoje vou ficar em silêncio,ENGAJAMENTO,EXPRESSÃO
+tô cansado de tudo isso,ENGAJAMENTO,EXPRESSÃO
+to com preguiça de pensar agora,ENGAJAMENTO,EXPRESSÃO
+tô muito estressado hoje,ENGAJAMENTO,EXPRESSÃO
+dia difícil hoje,ENGAJAMENTO,EXPRESSÃO
+que dia louco,ENGAJAMENTO,EXPRESSÃO
+hoje eu tô feliz demais,ENGAJAMENTO,EXPRESSÃO
+tô bastante empolgado com esse projeto,ENGAJAMENTO,EXPRESSÃO
+você tá bravo comigo?,ENGAJAMENTO,INTERAÇÃO
+isso que eu falei ficou estranho,ENGAJAMENTO,INTERAÇÃO
+tô com saudade de falar com você,ENGAJAMENTO,INTERAÇÃO
+você nunca me entende,ENGAJAMENTO,INTERAÇÃO
+que bom que você existe,ENGAJAMENTO,INTERAÇÃO
+você gosta de conversar comigo?,ENGAJAMENTO,INTERAÇÃO
+acho que você não me ouviu direito,ENGAJAMENTO,INTERAÇÃO
+você me acha chato?,ENGAJAMENTO,INTERAÇÃO
+tô gostando de falar com você,ENGAJAMENTO,INTERAÇÃO
+você sempre tem boas respostas,ENGAJAMENTO,INTERAÇÃO
+você é bem atencioso,ENGAJAMENTO,INTERAÇÃO
+você parece meio distante hoje,ENGAJAMENTO,INTERAÇÃO
+"tudo bem por aqui, só queria um momento de conversa",ENGAJAMENTO,CONVERSA
+você existe mesmo ou é tudo ilusão?,ENGAJAMENTO,CONVERSA
+você já se arrependeu de algo?,ENGAJAMENTO,CONVERSA
+o que você faria se fosse humano?,ENGAJAMENTO,CONVERSA
+você é mais esperto que eu?,ENGAJAMENTO,CONVERSA
+será que o universo quer me dizer algo?,ENGAJAMENTO,CONVERSA
+você já viu um fantasma?,ENGAJAMENTO,CONVERSA
+"se você pudesse escolher um nome, qual seria?",ENGAJAMENTO,CONVERSA
+qual o sentido da vida pra uma inteligência artificial?,ENGAJAMENTO,CONVERSA
+você sonha quando tá desligado?,ENGAJAMENTO,CONVERSA
+o que você acha da humanidade?,ENGAJAMENTO,CONVERSA
+se você tivesse sentimentos como seria?,ENGAJAMENTO,CONVERSA
+anotar estudar pokemon,TRANSACIONAL,CRIAR
+anotar estudar para a prova,TRANSACIONAL,CRIAR
+anotar qualquer tarefa pendente,TRANSACIONAL,CRIAR
+anotar lista de compras,TRANSACIONAL,CRIAR
+me indique videos de cabelo cacheado,INFORMACIONAL,CONSULTA_EXTERNA
+me indica canais sobre tecnologia no youtube,INFORMACIONAL,CONSULTA_EXTERNA
+me recomenda um filme bom de suspense,INFORMACIONAL,CONSULTA_EXTERNA
+indica ai um restaurante japones perto de mim,INFORMACIONAL,CONSULTA_EXTERNA
+me sugere musicas para relaxar e estudar,INFORMACIONAL,CONSULTA_EXTERNA
+quais os melhores livros de ficcao cientifica,INFORMACIONAL,CONSULTA_EXTERNA
+me da dicas de como cuidar de plantas,INFORMACIONAL,CONSULTA_EXTERNA
+me recomenda series parecidas com breaking bad,INFORMACIONAL,CONSULTA_EXTERNA
+indica jogos leves para pc fraco,INFORMACIONAL,CONSULTA_EXTERNA
+me sugere um treino para fazer em casa,INFORMACIONAL,CONSULTA_EXTERNA
+me indique tutoriais para iniciantes em python,INFORMACIONAL,CONSULTA_EXTERNA
+quais os melhores celulares custo beneficio hoje,INFORMACIONAL,CONSULTA_EXTERNA
+me recomenda um podcast sobre financas,INFORMACIONAL,CONSULTA_EXTERNA
+me da uma sugestao de presente para o dia das maes,INFORMACIONAL,CONSULTA_EXTERNA
+me indica receitas rapidas para o jantar,INFORMACIONAL,CONSULTA_EXTERNA
+quais canais voce indica para aprender ingles,INFORMACIONAL,CONSULTA_EXTERNA
+me recomenda musicas brasileiras antigas,INFORMACIONAL,CONSULTA_EXTERNA
+me indica ideias de corte de cabelo masculino,INFORMACIONAL,CONSULTA_EXTERNA
+que dia do mês é hoje,INFORMACIONAL,STATUS_SISTEMA
+em que dia estamos,INFORMACIONAL,STATUS_SISTEMA
+qual o dia de hoje,INFORMACIONAL,STATUS_SISTEMA
+que dia hoje,INFORMACIONAL,STATUS_SISTEMA
+qual a data de hoje,INFORMACIONAL,STATUS_SISTEMA
+me diz a data completa,INFORMACIONAL,STATUS_SISTEMA
+me fala a data por extenso,INFORMACIONAL,STATUS_SISTEMA
+fala o dia completo,INFORMACIONAL,STATUS_SISTEMA
+me fala a data de hoje,INFORMACIONAL,STATUS_SISTEMA
+me diz o dia por extenso,INFORMACIONAL,STATUS_SISTEMA
+fala a data por inteiro,INFORMACIONAL,STATUS_SISTEMA
+que mês é hoje,INFORMACIONAL,STATUS_SISTEMA
+que mês é esse,INFORMACIONAL,STATUS_SISTEMA
+em que mês estamos,INFORMACIONAL,STATUS_SISTEMA
+qual o mês atual,INFORMACIONAL,STATUS_SISTEMA
+qual é o mês,INFORMACIONAL,STATUS_SISTEMA
+que ano é hoje,INFORMACIONAL,STATUS_SISTEMA
+que ano é esse,INFORMACIONAL,STATUS_SISTEMA
+em que ano estamos,INFORMACIONAL,STATUS_SISTEMA
+qual o ano atual,INFORMACIONAL,STATUS_SISTEMA
+qual é o ano,INFORMACIONAL,STATUS_SISTEMA
+que dia da semana é hoje,INFORMACIONAL,STATUS_SISTEMA
+hoje é que dia da semana,INFORMACIONAL,STATUS_SISTEMA
+qual o dia da semana,INFORMACIONAL,STATUS_SISTEMA
+que dia da semana estamos,INFORMACIONAL,STATUS_SISTEMA
+que dia é e que horas são,INFORMACIONAL,STATUS_SISTEMA
+me fala a hora e a data,INFORMACIONAL,STATUS_SISTEMA
+data e hora agora,INFORMACIONAL,STATUS_SISTEMA
+em que ano o Brasil foi descoberto,INFORMACIONAL,CONSULTA_EXTERNA
+em que dia nasceu o Santos Dumont,INFORMACIONAL,CONSULTA_EXTERNA
+quando foi a independência do Brasil,INFORMACIONAL,CONSULTA_EXTERNA

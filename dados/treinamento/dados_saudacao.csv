@@ -1,0 +1,99 @@
+frase,alvo
+bom dia,saudacao_horario
+bom dia karen,saudacao_horario
+muito bom dia,saudacao_horario
+ótimo dia pra você,saudacao_horario
+tenha um bom dia,saudacao_horario
+boa tarde,saudacao_horario
+boa tarde karen,saudacao_horario
+ótima tarde,saudacao_horario
+muito boa tarde,saudacao_horario
+boa noite,saudacao_horario
+boa noite karen,saudacao_horario
+ótima noite,saudacao_horario
+tenha uma boa noite,saudacao_horario
+uma boa noite pra nós,saudacao_horario
+bom dia meu querido,saudacao_horario
+e aí,saudacao_informal
+e aí karen,saudacao_informal
+e aí mano,saudacao_informal
+fala,saudacao_informal
+fala karen,saudacao_informal
+fala aí,saudacao_informal
+fala tu,saudacao_informal
+fala comigo,saudacao_informal
+fala fiote,saudacao_informal
+opa,saudacao_informal
+opa karen,saudacao_informal
+opa beleza,saudacao_informal
+salve,saudacao_informal
+salve karen,saudacao_informal
+salve salve,saudacao_informal
+oi,saudacao_informal
+oi karen,saudacao_informal
+olá,saudacao_informal
+olá karen,saudacao_informal
+coé karen,saudacao_informal
+boa boa fi?,saudacao_informal
+karen,saudacao_chamando
+ei karen,saudacao_chamando
+ó karen,saudacao_chamando
+tá aí?,saudacao_chamando
+tá aí karen?,saudacao_chamando
+cê tá aí?,saudacao_chamando
+vc tá aí?,saudacao_chamando
+mano vc tá aí?,saudacao_chamando
+tá na escuta?,saudacao_chamando
+karen na escuta?,saudacao_chamando
+acorda karen,saudacao_chamando
+alô karen,saudacao_chamando
+você me ouve karen?,saudacao_chamando
+tá me ouvindo?,saudacao_chamando
+karen cê tá acordado?,saudacao_chamando
+tudo bem?,como_vai
+tudo bem karen?,como_vai
+tudo bem com você?,como_vai
+tudo bem por aí?,como_vai
+como você tá?,como_vai
+como você está hoje?,como_vai
+como vai?,como_vai
+como cê tá?,como_vai
+beleza?,como_vai
+beleza pura?,como_vai
+tudo em cima?,como_vai
+tudo certo?,como_vai
+tranquilo?,como_vai
+suave?,como_vai
+firmeza?,como_vai
+como estão as coisas?,como_vai
+tudo em ordem?,como_vai
+valeu,agradecimento
+valeu karen,agradecimento
+valeu demais,agradecimento
+valeu mano,agradecimento
+obrigado,agradecimento
+obrigado karen,agradecimento
+muito obrigado,agradecimento
+obrigadão,agradecimento
+obrigadão pela ajuda,agradecimento
+agradeço,agradecimento
+agradeço a ajuda,agradecimento
+valeu pela força,agradecimento
+tamo junto,agradecimento
+gratidão,agradecimento
+fico agradecido,agradecimento
+tchau,despedida
+tchau karen,despedida
+tchau tchau,despedida
+até mais,despedida
+até mais ver,despedida
+até logo,despedida
+até amanhã,despedida
+falou,despedida
+falou karen,despedida
+fui,despedida
+fui nessa,despedida
+até a próxima,despedida
+vou nessa karen,despedida
+vou descansar agora,despedida
+boa noite vou dormir,despedida

@@ -1,0 +1,90 @@
+frase,tags
+abre o google e o yt,B-ABRIR O B-ITEM O O B-ITEM
+anota tomar agua e comer melhor,B-ANOTAR B-ITEM I-ITEM O B-ITEM I-ITEM
+abre o google depois pesquisa receita de bolo,B-ABRIR O B-ITEM B-DEP B-PESQUISAR B-ITEM I-ITEM I-ITEM
+fecha a calculadora e fecha o navegador,B-FECHAR O B-ITEM O B-FECHAR O B-ITEM
+anota comprar pao e anota comprar cafe,B-ANOTAR B-ITEM I-ITEM O B-ANOTAR B-ITEM I-ITEM
+por favor abre o spotify cara,O O B-ABRIR O B-ITEM O
+anota lavar a louca em seguida fecha o bloco de notas,B-ANOTAR B-ITEM I-ITEM I-ITEM B-DEP B-DEP B-FECHAR O B-ITEM I-ITEM I-ITEM
+abre o discord e a steam,B-ABRIR O B-ITEM O O B-ITEM
+fecha o chrome e o spotify,B-FECHAR O B-ITEM O O B-ITEM
+anota pagar internet e anota comprar racao,B-ANOTAR B-ITEM I-ITEM O B-ANOTAR B-ITEM I-ITEM
+pesquisa cotacao do dolar hoje,B-PESQUISAR B-ITEM I-ITEM I-ITEM I-ITEM
+ve o clima no rio de janeiro,B-VER_CLIMA O O O B-ITEM I-ITEM I-ITEM
+abre o terminal e ai pesquisa como usar git,B-ABRIR O B-ITEM B-DEP B-DEP B-PESQUISAR B-ITEM I-ITEM I-ITEM
+por favor cara fecha a janela do navegador,O O O B-FECHAR O B-ITEM I-ITEM I-ITEM
+ah esqueci anota comprar remedio,O O B-ANOTAR B-ITEM I-ITEM
+anota comprar cafe e lavar o carro,B-ANOTAR B-ITEM I-ITEM O B-ITEM I-ITEM I-ITEM
+anota pagar o aluguel e comprar pao,B-ANOTAR B-ITEM I-ITEM I-ITEM O B-ITEM I-ITEM
+anota lavar a louca e passear com o cachorro,B-ANOTAR B-ITEM I-ITEM I-ITEM O B-ITEM I-ITEM I-ITEM I-ITEM
+abre o chrome o spotify e o vscode,B-ABRIR O B-ITEM O B-ITEM O O B-ITEM
+fecha a steam o discord e a twitch depois abre o visual studio code,B-FECHAR O B-ITEM O B-ITEM O O B-ITEM B-DEP B-ABRIR O B-ITEM I-ITEM I-ITEM
+cara por favor fecha o discord depois abre o spotify e ai pesquisa playlist para programar,O O O B-FECHAR O B-ITEM B-DEP B-ABRIR O B-ITEM B-DEP B-DEP B-PESQUISAR B-ITEM I-ITEM I-ITEM
+anota tudo junto na mesma nota que preciso agendar revisao do carro e trocar o filtro de ar porque ja passou do prazo,B-ANOTAR B-MODO_JUNTO I-MODO_JUNTO I-MODO_JUNTO I-MODO_JUNTO I-MODO_JUNTO O O B-ITEM I-ITEM I-ITEM I-ITEM O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O O O O
+da uma olhada no clima em porto alegre e em seguida busca se o aeroporto ta aberto,B-VER_CLIMA I-VER_CLIMA I-VER_CLIMA O O O B-ITEM I-ITEM B-DEP B-DEP B-DEP B-PESQUISAR O O B-ITEM I-ITEM I-ITEM
+anote em notas separadas configurar servidor nginx e no outro criar banco de dados postgres pois sao projetos distintos,B-ANOTAR B-MODO_SEPARADO I-MODO_SEPARADO I-MODO_SEPARADO B-ITEM I-ITEM I-ITEM O O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O O O
+karen por gentileza pesquisa preco de passagem para recife e ai anota ligar pra pousada cara,O O O B-PESQUISAR B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM B-DEP B-DEP B-ANOTAR B-ITEM I-ITEM I-ITEM O
+anota comprar dipirona e amoxicilina,B-ANOTAR B-ITEM I-ITEM O B-ITEM
+anote que devo estudar python amanha,B-ANOTAR O O B-ITEM I-ITEM I-ITEM
+anota comprar remedio na farmacia,B-ANOTAR B-ITEM I-ITEM I-ITEM I-ITEM
+ve o clima em salvador,B-VER_CLIMA O O O B-ITEM
+pesquisa voos baratos para curitiba,B-PESQUISAR B-ITEM I-ITEM I-ITEM I-ITEM
+fecha o visual studio code por gentileza cara,B-FECHAR O B-ITEM I-ITEM I-ITEM O O O
+anota comprar cafe depois ve o clima e na anotacao coloca acucar tambem,B-ANOTAR B-ITEM I-ITEM B-DEP B-VER_CLIMA O O O O B-ANOTAR O B-ITEM O
+abre o edge na verdade nao abre o chrome,B-ABRIR O B-ITEM B-CORRECAO I-CORRECAO I-CORRECAO B-ABRIR O B-ITEM
+anota comprar pao depois fecha o jogo ah pao nao troca por torrada,B-ANOTAR B-ITEM I-ITEM B-DEP B-FECHAR O B-ITEM O B-ITEM O B-SUBSTITUIR O B-ITEM
+anota comprar cafe depois fecha a janela e na anotacao coloca acucar tambem,B-ANOTAR B-ITEM I-ITEM B-DEP B-FECHAR O B-ITEM O O O B-ANOTAR B-ITEM O
+abre o terminal depois pesquisa tutorial de rust ah esqueci abre o vscode tambem,B-ABRIR O B-ITEM B-DEP B-PESQUISAR B-ITEM I-ITEM I-ITEM O O B-ABRIR O B-ITEM O
+abre o edge na verdade nao abre o chrome,B-ABRIR O B-ITEM B-CORRECAO I-CORRECAO I-CORRECAO B-ABRIR O B-ITEM
+fecha a calculadora quer dizer fecha o discord,B-FECHAR O B-ITEM B-CORRECAO I-CORRECAO B-FECHAR O B-ITEM
+pesquisa receita de lasanha ou melhor pesquisa receita de pizza,B-PESQUISAR B-ITEM I-ITEM I-ITEM B-CORRECAO I-CORRECAO B-PESQUISAR B-ITEM I-ITEM I-ITEM
+anota comprar pao depois fecha o jogo ah pao nao troca por torrada,B-ANOTAR B-ITEM I-ITEM B-DEP B-FECHAR O B-ITEM O B-ITEM O B-SUBSTITUIR O B-ITEM
+abre a steam e o spotify opa spotify nao muda pra discord,B-ABRIR O B-ITEM O O B-ITEM O B-ITEM O B-SUBSTITUIR O B-ITEM
+anota lavar a louca depois ve o clima e poe passar pano tambem,B-ANOTAR B-ITEM I-ITEM I-ITEM B-DEP B-VER_CLIMA O O O B-ANOTAR B-ITEM I-ITEM O
+pesquisa cotacao do euro cancela esse pesquisa preco do ouro,B-PESQUISAR B-ITEM I-ITEM I-ITEM B-CORRECAO I-CORRECAO B-PESQUISAR B-ITEM I-ITEM I-ITEM
+anota estudar matematica depois abre a twitch ah e fisica tambem,B-ANOTAR B-ITEM I-ITEM B-DEP B-ABRIR O B-ITEM O O B-ITEM O
+fecha o navegador pera ai fecha o gerenciador de tarefas,B-FECHAR O B-ITEM B-CORRECAO I-CORRECAO B-FECHAR O B-ITEM I-ITEM I-ITEM
+anota comprar arroz depois ve o clima em curitiba ah esqueci anota feijao tambem,B-ANOTAR B-ITEM I-ITEM B-DEP B-VER_CLIMA O O O B-ITEM O O B-ANOTAR B-ITEM O
+anote que eu preciso comer melhor e tomar agua e faca outra nota separada para eu estudar pokemon,B-ANOTAR O O O B-ITEM I-ITEM O B-ITEM I-ITEM O B-ANOTAR O O B-MODO_SEPARADO O O B-ITEM I-ITEM
+anote que eu preciso melhor e tomar agua e faca outra nota separada para eu estudar pokemon,B-ANOTAR O O O B-ITEM O B-ITEM I-ITEM O B-ANOTAR O O B-MODO_SEPARADO O O B-ITEM I-ITEM
+cria uma nota para comprar leite e faz outra nota separada para lavar o carro,B-ANOTAR O O O B-ITEM I-ITEM O B-ANOTAR O O B-MODO_SEPARADO O B-ITEM I-ITEM I-ITEM
+anota que eu preciso treinar peito e pra eu estudar ingles,B-ANOTAR O O O B-ITEM I-ITEM O O O B-ITEM I-ITEM
+faca uma anotacao de pagar o aluguel amanha,B-ANOTAR O O O B-ITEM I-ITEM I-ITEM I-ITEM
+faz uma nota separada para comprar remedio,B-ANOTAR O O B-MODO_SEPARADO O B-ITEM I-ITEM
+anota que preciso parar de comer tanto assim e tambem tomar agua,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM
+anote que preciso parar de comer tanto assim e tambem de tomar agua,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O O B-ITEM I-ITEM
+anote que preciso parar de comer tanto assim,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM
+anota que preciso estudar python e tambem treinar perna,B-ANOTAR O O B-ITEM I-ITEM O O B-ITEM I-ITEM
+anote que devo beber bastante agua e tambem dormir mais cedo,B-ANOTAR O O B-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anota comprar leite desnatado e tambem comprar pao integral,B-ANOTAR B-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anota que preciso limpar o meu quarto e tambem lavar a louca,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anote que preciso acordar mais cedo e tambem ir para a academia,B-ANOTAR O O B-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM I-ITEM
+anota pagar a conta de luz e tambem pagar a fatura do cartao,B-ANOTAR B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM
+anota comprar racao de cachorro e tambem comprar areia de gato,B-ANOTAR B-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM I-ITEM
+anote parar de gastar dinheiro e tambem comecar a economizar,B-ANOTAR B-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anota que preciso comer melhor e tambem tomar bastante agua,B-ANOTAR O O B-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anota que preciso fazer caminhada todos os dias e tambem meditar,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM
+anote revisar os relatorios da empresa e tambem enviar o email,B-ANOTAR B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anota estudar para a prova final e tambem entregar o trabalho,B-ANOTAR B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anota comprar frutas verduras e legumes e tambem comprar carne,B-ANOTAR B-ITEM I-ITEM I-ITEM O I-ITEM O O B-ITEM I-ITEM
+anote em notas separadas lavar a louca e no outro arrumar a cama,B-ANOTAR B-MODO_SEPARADO I-MODO_SEPARADO I-MODO_SEPARADO B-ITEM I-ITEM I-ITEM O O O B-ITEM I-ITEM I-ITEM
+anote em notas separadas comprar cafe e tambem comprar pao,B-ANOTAR B-MODO_SEPARADO I-MODO_SEPARADO I-MODO_SEPARADO B-ITEM I-ITEM O O B-ITEM I-ITEM
+anota que preciso comer muito melhor a partir de hoje,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM I-ITEM I-ITEM
+anote que tenho que treinar peito e tambem treinar triceps,B-ANOTAR O O O B-ITEM I-ITEM O O B-ITEM I-ITEM
+anota cortar o cabelo amanha e tambem passar na farmacia,B-ANOTAR B-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anote que preciso ligar para o medico e tambem remarcar a consulta,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anota lavar o carro no sabado e tambem calibrar os pneus,B-ANOTAR B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM I-ITEM I-ITEM
+anota que preciso resolver as pendencias do trabalho e tambem descansar,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM O O B-ITEM
+anote para mim que devo comer melhor a partir de hoje,B-ANOTAR O O O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM I-ITEM
+anota pra mim que preciso treinar perna amanha,B-ANOTAR O O O O B-ITEM I-ITEM I-ITEM
+anote para mim comprar cafe e acucar,B-ANOTAR O O B-ITEM I-ITEM O B-ITEM
+anota pra mim comprar racao de cachorro,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM
+por favor anote para mim estudar python hoje a noite,O O B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM
+anota pra mim que tenho que pagar a fatura do cartao,B-ANOTAR O O O O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM
+anote para mim que preciso acordar mais cedo amanha,B-ANOTAR O O O O B-ITEM I-ITEM I-ITEM I-ITEM
+pesquisa previsao do tempo e ai ve o clima de sao paulo,B-PESQUISAR B-ITEM I-ITEM I-ITEM B-DEP B-DEP B-VER_CLIMA O O O B-ITEM I-ITEM
+anote separado em 2 arquivos diferentes q devo tomar agua e no outro coloca para comer melhor pois irei fazer 2 coisas diferentes para cada arquivo,B-ANOTAR B-MODO_SEPARADO I-MODO_SEPARADO I-MODO_SEPARADO I-MODO_SEPARADO I-MODO_SEPARADO O O B-ITEM I-ITEM O O O B-ANOTAR O B-ITEM I-ITEM O O O O O O O O O
+anota tudo junto na mesma nota comprar carne e tambem comprar cerveja,B-ANOTAR B-MODO_JUNTO I-MODO_JUNTO I-MODO_JUNTO I-MODO_JUNTO I-MODO_JUNTO B-ITEM I-ITEM O O B-ITEM I-ITEM
+faz pra mim uma nota que devo beber mais agua,B-ANOTAR O O O O O O B-ITEM I-ITEM I-ITEM
+anote para mim ligar para o medico na segunda feira,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM I-ITEM I-ITEM
+anota pra mim lavar o carro no final de semana,B-ANOTAR O O B-ITEM I-ITEM I-ITEM I-ITEM I-ITEM I-ITEM I-ITEM

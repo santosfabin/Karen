@@ -1,0 +1,78 @@
+# ==========================================
+# Ambientes virtuais
+# ==========================================
+.venv/
+venv/
+env/
+
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ==========================================
+# IDEs e sistema
+# ==========================================
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Segredos e config local
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+
+# ==========================================
+# Pesos e binários de modelo
+# Nunca versionar: arquivos grandes, treinados
+# localmente ou baixados (Kokoro, Whisper, HF).
+# ==========================================
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.bin
+*.joblib
+*.pkl
+
+# Árvore inteira de modelos (caminhos em PT e EN)
+models/
+
+# ==========================================
+# Conteúdo gerado em runtime (dados do usuário)
+# ==========================================
+storage/notes/*.txt
+storage/notes/*.md
+storage/notas/*.txt
+storage/notas/*.md
+!storage/notes/.gitkeep
+!storage/notas/.gitkeep
+
+# ==========================================
+# Dumps, logs, áudio capturado, caches
+# ==========================================
+gerar_contexto.py
+contextogeral*.md
+*.log
+logs/
+*.wav
+*.mp3
+*.flac
+*.ogg
+.cache/
+.huggingface/
