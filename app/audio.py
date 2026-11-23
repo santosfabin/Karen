@@ -28,6 +28,8 @@ BUFFER_BLOCOS = int(4.0 / BLOCK_S)   # 80 blocos (4 s) sempre guardados
 WAKE_BLOCOS = int(2.0 / BLOCK_S)     # janela do modelo: 40 blocos (2 s)
 WAKE_CADA = 2                        # roda o modelo a cada 2 blocos (0.1 s)
 WAKE_THRESHOLD = 0.5
+WAKE_USAR_ATRASADAS = True           # testa tambem a janela que terminou antes
+WAKE_ATRASO_BLOCOS = 8               # 0,4 s (ajustar entre 6 e 10)
 GATE_S = 1.5                         # so roda o modelo se teve voz nos ultimos 1.5 s
 
 # Corte do "Karen"
@@ -148,9 +150,8 @@ def _transcrever(transcriber, blocos, pause):
     }
 
 
-def ouvir_comando(mic, wake_model, transcriber, noise_threshold, ao_acordar=None):
-    """Fica ouvindo. Ao detectar 'Karen', corta o 'Karen' do audio, grava o que vem
-    depois ate a pausa e transcreve so isso. 'text' vem vazio se a pessoa so chamou."""
+def aguardar_wake(mic, wake_model, noise_threshold):
+    """Espera o 'Karen'. Devolve (blocos_do_buffer, atraso_em_blocos, score)."""
     mic.flush()
     zero = np.zeros(BLOCK_SAMPLES, dtype=np.float32)
     buffer = deque([zero] * BUFFER_BLOCOS, maxlen=BUFFER_BLOCOS)
@@ -167,16 +168,41 @@ def ouvir_comando(mic, wake_model, transcriber, noise_threshold, ao_acordar=None
         if n % WAKE_CADA or desde_voz * BLOCK_S > GATE_S:
             continue
 
-        janela = np.concatenate(list(buffer)[-WAKE_BLOCOS:])
+        blocos = list(buffer)
+        janela = np.concatenate(blocos[-WAKE_BLOCOS:])
         scores = wake_model.predict(janela)
-        if (max(scores.values()) if scores else 0.0) >= WAKE_THRESHOLD:
-            break
+        score = max(scores.values()) if scores else 0.0
+        if score >= WAKE_THRESHOLD:
+            return blocos, 0, score
+
+        if (
+            WAKE_USAR_ATRASADAS
+            and n % (2 * WAKE_CADA) == 0
+            and len(blocos) >= WAKE_BLOCOS + WAKE_ATRASO_BLOCOS
+        ):
+            fim = len(blocos) - WAKE_ATRASO_BLOCOS
+            janela_atrasada = np.concatenate(blocos[fim - WAKE_BLOCOS:fim])
+            scores_atrasados = wake_model.predict(janela_atrasada)
+            score_atrasado = max(scores_atrasados.values()) if scores_atrasados else 0.0
+            if score_atrasado >= WAKE_THRESHOLD:
+                return blocos, WAKE_ATRASO_BLOCOS, score_atrasado
+
+
+def ouvir_comando(mic, wake_model, transcriber, noise_threshold, ao_acordar=None):
+    """Fica ouvindo. Ao detectar 'Karen', corta o 'Karen' do audio, grava o que vem
+    depois ate a pausa e transcreve so isso. 'text' vem vazio se a pessoa so chamou."""
+    blocos, atraso, score = aguardar_wake(mic, wake_model, noise_threshold)
 
     if ao_acordar:
         ao_acordar()
 
-    blocos = list(buffer)
-    gravado = blocos[_ponto_de_corte(blocos, noise_threshold):]
+    fim = len(blocos) - atraso
+    corte = _ponto_de_corte(blocos[:fim] if atraso else blocos, noise_threshold)
+    gravado = blocos[corte:]
+
+    if DEBUG:
+        janela = "atual" if atraso == 0 else f"atrasada de {atraso * BLOCK_S:.1f}s"
+        print(f"  [DEBUG] wake {janela}: score={score:.3f}, corte={corte * BLOCK_S:.2f}s")
 
     falou = any(rms(b) > noise_threshold for b in gravado)
     silencio = 0
