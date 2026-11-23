@@ -1,4 +1,5 @@
 import math
+import os
 import queue
 import re
 import sys
@@ -10,7 +11,8 @@ import scipy.signal
 import sounddevice as sd
 import soundfile as sf
 
-sys.dont_write_bytecode = True
+DEBUG = os.getenv("KAREN_DEBUG", "").lower() in ("1", "true", "yes", "on")
+
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
@@ -129,8 +131,11 @@ def _vazio():
 
 def _transcrever(transcriber, blocos, pause):
     audio_completo = np.concatenate(blocos)
-    sf.write("/tmp/karen_ultimo.wav", audio_completo, SR)  # DEBUG
-    print(f"  [DEBUG] audio enviado ao Whisper: {len(audio_completo) / SR:.1f}s")
+    if DEBUG:
+        debug_wav = Path("/tmp/opencode/karen_ultimo.wav")
+        debug_wav.parent.mkdir(parents=True, exist_ok=True)
+        sf.write(debug_wav, audio_completo, SR)
+        print(f"  [DEBUG] audio enviado ao Whisper: {len(audio_completo) / SR:.1f}s")
     words, seconds = transcriber.transcrever(audio_completo, vad_filter=True)
     bruto = " ".join(w["palavra"] for w in words).strip()
     texto = re.sub(r"^[^\w]+|[^\w]+$", "", bruto).strip()
@@ -229,8 +234,9 @@ def escutar_frase_avulsa(mic, transcriber, noise_threshold):
                 pre.append(block)
                 esperado += 1
                 if esperado * BLOCK_S >= START_TIMEOUT:
-                    print(f"  [DEBUG] ninguem passou do limiar: limiar {noise_threshold:.4f}, "
-                          f"maior volume ouvido {pico:.4f}")
+                    if DEBUG:
+                        print(f"  [DEBUG] ninguem passou do limiar: limiar {noise_threshold:.4f}, "
+                              f"maior volume ouvido {pico:.4f}")
                     return None
             continue
 
@@ -241,40 +247,7 @@ def escutar_frase_avulsa(mic, transcriber, noise_threshold):
             break
 
     resultado = _transcrever(transcriber, gravado, silencio * BLOCK_S)
-    if not resultado["text"]:
+    if DEBUG and not resultado["text"]:
         print(f"  [DEBUG] whisper devolveu vazio ({total * BLOCK_S:.1f}s de audio, "
               f"volume maximo {pico:.4f})")
     return resultado
-    """Escuta o comando depois que ela respondeu 'Pois nao'. None se ninguem falou."""
-    mic.flush()
-    pre = deque(maxlen=PRE_BLOCOS)
-    gravado = []
-    falando = False
-    silencio = 0
-    esperado = 0
-    total = 0
-
-    while True:
-        block = mic.read()
-        loud = rms(block) > noise_threshold
-
-        if not falando:
-            if loud:
-                falando = True
-                gravado = list(pre) + [block]
-                total = len(gravado)
-                silencio = 0
-            else:
-                pre.append(block)
-                esperado += 1
-                if esperado * BLOCK_S >= START_TIMEOUT:
-                    return None
-            continue
-
-        gravado.append(block)
-        total += 1
-        silencio = 0 if loud else silencio + 1
-        if silencio * BLOCK_S >= PAUSE_MIN or total * BLOCK_S >= MAX_SPEECH:
-            break
-
-    return _transcrever(transcriber, gravado, silencio * BLOCK_S)

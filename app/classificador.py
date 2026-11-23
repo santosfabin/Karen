@@ -1,10 +1,8 @@
-import sys
 import time
 from pathlib import Path
 import joblib
 from sentence_transformers import SentenceTransformer
 
-sys.dont_write_bytecode = True
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 MODELS_DIR = ROOT_DIR / "models"
@@ -49,7 +47,7 @@ class ClassificadorPai:
         inicio = time.perf_counter()
 
         # 1. Vetorização
-        vetor = self.tradutor.encode([frase])
+        vetor = self.tradutor.encode([frase], show_progress_bar=False)
 
         # 2. Categoria Macro (Nível 1)
         categoria, conf_cat = self._prever(vetor, self.modelo_pai)

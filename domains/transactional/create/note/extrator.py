@@ -1,12 +1,10 @@
 import re
-import sys
 import warnings
 from pathlib import Path
 import torch
 from transformers import AutoModelForTokenClassification, AutoTokenizer
 
 warnings.filterwarnings("ignore")
-sys.dont_write_bytecode = True
 
 ROOT_DIR = Path(__file__).resolve().parents[4]
 MODEL_DIR = ROOT_DIR / "models" / "slots" / "note"

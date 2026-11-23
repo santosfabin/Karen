@@ -1,11 +1,9 @@
-import sys
 from domains.transactional.create.note.catalogo import TipoNota
 from domains.transactional.create.note.identificador import identificar_tipo_nota
 from domains.transactional.create.note.extrator import extrair_conteudo_nota
 from domains.transactional.create.note.tools.simples import criar_nota_simples
 from domains.transactional.create.note.tools.markdown import criar_nota_markdown
 
-sys.dont_write_bytecode = True
 
 
 def processar(frase: str, conteudo: str = None):

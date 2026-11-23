@@ -2,7 +2,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-sys.dont_write_bytecode = True
 
 
 def rodar_treino(script_nome: str):

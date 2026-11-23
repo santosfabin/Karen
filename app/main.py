@@ -3,10 +3,13 @@ import os
 import time
 import importlib
 import json
-import re
+from functools import lru_cache
 from pathlib import Path
 
-sys.dont_write_bytecode = True
+
+DEBUG = os.getenv("KAREN_DEBUG", "").lower() in ("1", "true", "yes", "on")
+
+WHISPER_MODELO = "large-v3-turbo"
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
@@ -36,6 +39,11 @@ PASTAS_SUBCATEGORIA = {
 }
 
 
+@lru_cache(maxsize=None)
+def _importar_modulo(caminho: str):
+    return importlib.import_module(caminho)
+
+
 def despachar_dinamicamente(categoria: str, subcategoria: str, frase: str, conteudo: str = None):
     cat_limpa = categoria.lower()
     sub_limpa = subcategoria.lower()
@@ -44,7 +52,7 @@ def despachar_dinamicamente(categoria: str, subcategoria: str, frase: str, conte
     caminho_modulo = f"domains.{pasta_cat}.{pasta_sub}.identificador"
 
     try:
-        modulo = importlib.import_module(caminho_modulo)
+        modulo = _importar_modulo(caminho_modulo)
         if hasattr(modulo, "processar"):
             try:
                 return modulo.processar(frase, conteudo=conteudo)
@@ -70,12 +78,12 @@ def processar_frase(frase_crua: str, classificador, decompositor):
     comandos_json = decompositor.processar(frase_crua)
     tarefas = remontar(comandos_json)
 
-    print("  [DEBUG DECOMPOSIÇÃO] JSON Estruturado:")
-    print("  " + json.dumps(comandos_json, ensure_ascii=False, indent=4).replace("\n", "\n  "))
-
-    print(f"\n  [DEBUG FILA] Total de Ações na Fila: {len(tarefas)}")
-    for t in tarefas:
-        print(f"    -> [ID {t['id']}] modo='{t.get('modo')}' | frase='{t['frase']}'")
+    if DEBUG:
+        print("  [DEBUG DECOMPOSIÇÃO] JSON Estruturado:")
+        print("  " + json.dumps(comandos_json, ensure_ascii=False, indent=4).replace("\n", "\n  "))
+        print(f"\n  [DEBUG FILA] Total de Ações na Fila: {len(tarefas)}")
+        for t in tarefas:
+            print(f"    -> [ID {t['id']}] modo='{t.get('modo')}' | frase='{t['frase']}'")
     print("-" * 55)
 
     if not tarefas:
@@ -108,7 +116,6 @@ def processar_frase(frase_crua: str, classificador, decompositor):
 
         if eh_comando and not eh_lote:
             emitir_evento("INICIANDO", acao=res["subcategoria"])
-            time.sleep(0.05)
 
         try:
             resultado = despachar_dinamicamente(
@@ -134,9 +141,6 @@ def processar_frase(frase_crua: str, classificador, decompositor):
 
         duracao_tarefa = (time.perf_counter() - inicio_tarefa) * 1000
         print(f"  -> Concluído em : {duracao_tarefa:.2f} ms")
-
-        if not eh_lote and i < total_tarefas - 1:
-            time.sleep(0.5)
 
     if eh_lote:
         emitir_lote_fim(sucessos_lote, erros_lote)
@@ -191,7 +195,7 @@ def modo_voz(classificador, decompositor):
     from app.transcritor import Transcritor
 
     print("Carregando Whisper e wake word...")
-    transcritor = Transcritor("small")
+    transcritor = Transcritor(WHISPER_MODELO)
     wake = WakeWordModel(models=[str(audio.WAKE_MODEL)])
 
     with audio.Microphone() as mic:
@@ -233,11 +237,12 @@ def modo_voz(classificador, decompositor):
 
 def main():
     print("Iniciando o Sistema Karen...")
-    iniciar_monitor_eventos()
+    modo_voz_ativo = "--voz" in sys.argv
+    iniciar_monitor_eventos(precarregar_voz=modo_voz_ativo)
     classificador = ClassificadorPai()
     decompositor = DecompositorKaren()
 
-    if "--voz" in sys.argv:
+    if modo_voz_ativo:
         modo_voz(classificador, decompositor)
     else:
         modo_texto(classificador, decompositor)

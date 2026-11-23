@@ -1,7 +1,5 @@
-import sys
 from datetime import datetime
 
-sys.dont_write_bytecode = True
 
 MESES = [
     "janeiro", "fevereiro", "março", "abril", "maio", "junho",

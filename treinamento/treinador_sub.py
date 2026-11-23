@@ -7,7 +7,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
 
-sys.dont_write_bytecode = True
 
 # Diretórios base
 ROOT_DIR = Path(__file__).resolve().parent.parent

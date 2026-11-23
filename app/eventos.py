@@ -1,9 +1,7 @@
 import io
-import os
 from pathlib import Path
 import queue
 import random
-import sys
 import threading
 import time
 
@@ -12,13 +10,11 @@ import pygame
 import soundfile as sf
 from kokoro_onnx import Kokoro
 
-sys.dont_write_bytecode = True
-
-pygame.mixer.init()
 
 _fila_eventos = queue.Queue()
 _worker_iniciado = False
 _interromper_atual = threading.Event()
+_mixer_iniciado = False
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
@@ -47,16 +43,24 @@ def _carregar_voz():
         # Pré-calcula a voz combinada uma única vez na memória RAM
         banco = np.load(str(VOICES_PATH))
         _voz_blend = (banco["pf_dora"] * 0.60) + (banco["bf_emma"] * 0.40)
-        print("  🔊 [VOZ] Motor Kokoro carregado na RAM com Blend Emma (60/40)!")
+        print("  🔊 [VOZ] Motor Kokoro carregado na RAM com Blend Dora 60% + Emma 40%!")
 
     return _kokoro
+
+def _garantir_mixer():
+    """Inicializa o mixer só quando o áudio for realmente usado."""
+    global _mixer_iniciado
+    if not _mixer_iniciado:
+        pygame.mixer.init()
+        _mixer_iniciado = True
 
 def interromper_fala():
     """Corta o áudio imediatamente e esvazia a fila pendente."""
     _interromper_atual.set()
     try:
-        pygame.mixer.music.stop()
-        pygame.mixer.music.unload()
+        if pygame.mixer.get_init():
+            pygame.mixer.music.stop()
+            pygame.mixer.music.unload()
     except Exception:
         pass
 
@@ -92,14 +96,16 @@ def _falar_texto(texto: str):
         buffer_memoria.seek(0)
 
         # 3. O Pygame reproduz direto do buffer de memória
+        _garantir_mixer()
         pygame.mixer.music.load(buffer_memoria)
         pygame.mixer.music.play()
 
+        clock = pygame.time.Clock()
         while pygame.mixer.music.get_busy():
             if _interromper_atual.is_set():
                 pygame.mixer.music.stop()
                 break
-            pygame.time.Clock().tick(30)
+            clock.tick(30)
 
         pygame.mixer.music.unload()
 
@@ -140,8 +146,9 @@ TEMPLATES_STATUS = {
 def aguardar_eventos():
     _fila_eventos.join()
 
-def _worker_loop():
-    _carregar_voz()
+def _worker_loop(precarregar_voz: bool = True):
+    if precarregar_voz:
+        _carregar_voz()
 
     while True:
         try:
@@ -161,10 +168,15 @@ def _worker_loop():
         except Exception as e:
             print(f"      -> Erro no monitor: {e}")
 
-def iniciar_monitor_eventos():
+def iniciar_monitor_eventos(precarregar_voz: bool = True):
     global _worker_iniciado
     if not _worker_iniciado:
-        t = threading.Thread(target=_worker_loop, daemon=True, name="WorkerStatusKaren")
+        t = threading.Thread(
+            target=_worker_loop,
+            args=(precarregar_voz,),
+            daemon=True,
+            name="WorkerStatusKaren",
+        )
         t.start()
         _worker_iniciado = True
 

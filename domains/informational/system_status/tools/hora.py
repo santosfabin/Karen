@@ -1,10 +1,8 @@
-import sys
 from datetime import datetime
 
-sys.dont_write_bytecode = True
 
 
-def executar(frase: str = "") -> str:
+def formatar_hora() -> str:
     agora = datetime.now()
     hora = agora.hour
     minuto = agora.minute
@@ -20,11 +18,14 @@ def executar(frase: str = "") -> str:
         texto_hora = f"{hora} horas"
 
     if minuto == 0:
-        resposta = f"Agora é {texto_hora} em ponto." if hora in (0, 1, 12) else f"Agora são {texto_hora} em ponto."
-    elif minuto == 1:
-        resposta = f"Agora é {texto_hora} e um minuto." if hora in (0, 1, 12) else f"Agora são {texto_hora} e um minuto."
-    else:
-        resposta = f"Agora é {texto_hora} e {minuto} minutos." if hora in (0, 1, 12) else f"Agora são {texto_hora} e {minuto} minutos."
+        return f"Agora é {texto_hora} em ponto." if hora in (0, 1, 12) else f"Agora são {texto_hora} em ponto."
+    if minuto == 1:
+        return f"Agora é {texto_hora} e um minuto." if hora in (0, 1, 12) else f"Agora são {texto_hora} e um minuto."
+    return f"Agora é {texto_hora} e {minuto} minutos." if hora in (0, 1, 12) else f"Agora são {texto_hora} e {minuto} minutos."
+
+
+def executar(frase: str = "") -> str:
+    resposta = formatar_hora()
 
     print("      " + "-" * 48)
     print(f"      -> Karen        : {resposta}")

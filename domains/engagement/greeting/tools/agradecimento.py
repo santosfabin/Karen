@@ -1,11 +1,20 @@
-import sys
-from datetime import datetime
+import random
 
-sys.dont_write_bytecode = True
+
+OPCOES = [
+    "De nada.",
+    "Por nada.",
+    "Disponha.",
+    "Imagina, estou aqui para ajudar.",
+    "Foi um prazer.",
+    "Sempre às ordens.",
+    "Que isso, sem problema.",
+    "Estou à disposição.",
+]
 
 
 def executar(frase: str = "") -> str:
-    resposta = f"Estamos em {datetime.now().year}."
+    resposta = random.choice(OPCOES)
 
     print("      " + "-" * 48)
     print(f"      -> Karen        : {resposta}")

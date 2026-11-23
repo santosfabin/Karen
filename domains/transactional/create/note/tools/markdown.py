@@ -1,8 +1,6 @@
-import sys
 from datetime import datetime
 from pathlib import Path
 
-sys.dont_write_bytecode = True
 
 ROOT_DIR = Path(__file__).resolve().parents[5]
 STORAGE_DIR = ROOT_DIR / "storage" / "notes"

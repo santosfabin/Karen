@@ -80,7 +80,7 @@ python treinamento/treinar.py
 
 Isso roda, nesta ordem: decompositor → categoria → subcategorias → saudação → slots de nota.
 
-Alguns treinadores ainda gravam pastas em português (`decompositor/`, `slots/nota/`). Se o app não achar o arquivo, copie (ou crie um symlink) para o caminho em inglês da tabela acima.
+Os treinadores gravam direto nos caminhos em inglês usados pelo runtime. Se você tiver pastas antigas em português (`decompositor/`, `slots/nota/`, `categoria/`, `saudacao/`, `subcategoria/`), elas não são mais necessárias e podem ser removidas depois de conferir que os arquivos em inglês existem.
 
 Dados de treino: `dados/treinamento/`.
 
@@ -106,6 +106,8 @@ No modo texto: `sair` / `exit` / `q` encerra; `clear` limpa a tela.
 
 No modo voz: diga **Karen** e o comando na sequência, ou só **Karen** e espere ela pedir pra falar. `Ctrl+C` sai.
 
+Para depurar a transcrição e a decomposição, use `KAREN_DEBUG=1 python -m app.main --voz`. Nesse modo o último áudio enviado ao Whisper é salvo em `/tmp/opencode/karen_ultimo.wav`.
+
 Exemplos:
 
 ```
@@ -114,7 +116,7 @@ que horas são
 que dia é hoje
 anota comprar pão
 anota em markdown a ata da reunião
-anota tomar água e que horas são
+anota tomar água e comer melhor
 ```
 
 Notas vão para `storage/notes/` (timestamp no nome). Esse diretório não é versionado.

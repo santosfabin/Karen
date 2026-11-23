@@ -1,5 +1,5 @@
 import importlib
-import sys
+import os
 import unicodedata
 import dateparser.search
 from rapidfuzz import fuzz
@@ -7,12 +7,17 @@ from text_to_num import alpha2digit
 
 from domains.transactional.create.catalogo import CATALOGO_REGRAS_CRIAR, AlvoCriar
 
-sys.dont_write_bytecode = True
+DEBUG = os.getenv("KAREN_DEBUG", "").lower() in ("1", "true", "yes", "on")
 
 
 def _remover_acentos(texto: str) -> str:
     nfkd = unicodedata.normalize("NFKD", texto)
     return "".join([c for c in nfkd if not unicodedata.combining(c)]).lower()
+
+
+CATALOGO_NORMALIZADO = {
+    _remover_acentos(termo): regra for termo, regra in CATALOGO_REGRAS_CRIAR.items()
+}
 
 
 def _extrair_parametros(frase: str) -> set:
@@ -34,7 +39,8 @@ def _extrair_parametros(frase: str) -> set:
         }
     )
 
-    print(f"    [DEBUG] Matches de Tempo : {matches_tempo}")
+    if DEBUG:
+        print(f"    [DEBUG] Matches de Tempo : {matches_tempo}")
 
     if matches_tempo:
         parametros.add("TEMPO")
@@ -51,7 +57,8 @@ def identificar_alvo(frase: str) -> AlvoCriar:
     palavras = frase_limpa.split()
     parametros_presentes = _extrair_parametros(frase)
 
-    print(f"    [DEBUG] Parâmetros       : {parametros_presentes}")
+    if DEBUG:
+        print(f"    [DEBUG] Parâmetros       : {parametros_presentes}")
 
     melhor_score = 0.0
     regra_encontrada = None
@@ -61,8 +68,8 @@ def identificar_alvo(frase: str) -> AlvoCriar:
     for tamanho in range(3, 0, -1):
         for i in range(len(palavras) - tamanho + 1):
             trecho = " ".join(palavras[i : i + tamanho])
-            for termo_catalogo, regra in CATALOGO_REGRAS_CRIAR.items():
-                score = fuzz.ratio(trecho, _remover_acentos(termo_catalogo))
+            for termo_catalogo, regra in CATALOGO_NORMALIZADO.items():
+                score = fuzz.ratio(trecho, termo_catalogo)
                 
                 # Dá preferência para termos diretos ou scores maiores
                 if score >= 80.0:
@@ -75,7 +82,8 @@ def identificar_alvo(frase: str) -> AlvoCriar:
                         regra_encontrada = regra
                         termo_vencedor = termo_catalogo
 
-    print(f"    [DEBUG] Termo Match      : '{termo_vencedor}' (Score: {melhor_score:.1f})")
+    if DEBUG:
+        print(f"    [DEBUG] Termo Match      : '{termo_vencedor}' (Score: {melhor_score:.1f})")
 
     if not regra_encontrada:
         return AlvoCriar.DESCONHECIDO

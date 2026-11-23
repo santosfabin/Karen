@@ -1,7 +1,5 @@
-import sys
 from enum import Enum
 
-sys.dont_write_bytecode = True
 
 
 class AlvoCriar(Enum):

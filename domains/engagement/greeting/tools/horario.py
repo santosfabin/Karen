@@ -1,8 +1,6 @@
-import sys
 import random
 from datetime import datetime
 
-sys.dont_write_bytecode = True
 
 
 def executar(frase: str = ""):

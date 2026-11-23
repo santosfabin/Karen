@@ -9,11 +9,10 @@ from torch.utils.data import DataLoader, Dataset
 from transformers import AutoModelForTokenClassification, AutoTokenizer
 
 warnings.filterwarnings("ignore")
-sys.dont_write_bytecode = True
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 CSV_PATH = ROOT_DIR / "dados" / "treinamento" / "dados_slots_nota.csv"
-OUTPUT_DIR = ROOT_DIR / "models" / "slots" / "nota"
+OUTPUT_DIR = ROOT_DIR / "models" / "slots" / "note"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 MODELO_BASE = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"

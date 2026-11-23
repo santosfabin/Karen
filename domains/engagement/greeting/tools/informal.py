@@ -1,7 +1,5 @@
-import sys
 import random
 
-sys.dont_write_bytecode = True
 
 
 def executar(frase: str = ""):

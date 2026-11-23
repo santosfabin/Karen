@@ -1,11 +1,9 @@
-import sys
 from pathlib import Path
 import re
 import unicodedata
 import torch
 import torch.nn as nn
 
-sys.dont_write_bytecode = True
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 MODEL_PATH = ROOT_DIR / "models" / "decomposer" / "modelo_karen.pt"

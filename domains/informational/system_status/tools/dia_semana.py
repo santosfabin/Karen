@@ -1,13 +1,10 @@
-import sys
 from datetime import datetime
 
-sys.dont_write_bytecode = True
+from domains.informational.system_status.tools.data import DIAS_SEMANA
 
 
 def executar(frase: str = "") -> str:
-    dia = datetime.now().day
-    dia_texto = "primeiro" if dia == 1 else str(dia)
-    resposta = f"Hoje é dia {dia_texto}."
+    resposta = f"Hoje é {DIAS_SEMANA[datetime.now().weekday()]}."
 
     print("      " + "-" * 48)
     print(f"      -> Karen        : {resposta}")

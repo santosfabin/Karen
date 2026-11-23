@@ -1,4 +1,3 @@
-import sys
 import unicodedata
 from rapidfuzz import fuzz
 
@@ -7,12 +6,16 @@ from domains.transactional.create.note.catalogo import (
     TipoNota,
 )
 
-sys.dont_write_bytecode = True
 
 
 def _remover_acentos(texto: str) -> str:
     nfkd = unicodedata.normalize("NFKD", texto)
     return "".join([c for c in nfkd if not unicodedata.combining(c)]).lower()
+
+
+CATALOGO_NORMALIZADO = {
+    _remover_acentos(termo): tipo for termo, tipo in CATALOGO_REGRAS_NOTA.items()
+}
 
 
 def identificar_tipo_nota(frase: str) -> TipoNota:
@@ -29,8 +32,8 @@ def identificar_tipo_nota(frase: str) -> TipoNota:
     for tamanho in range(3, 0, -1):
         for i in range(len(palavras) - tamanho + 1):
             trecho = " ".join(palavras[i : i + tamanho])
-            for termo_catalogo, tipo in CATALOGO_REGRAS_NOTA.items():
-                score = fuzz.ratio(trecho, _remover_acentos(termo_catalogo))
+            for termo_catalogo, tipo in CATALOGO_NORMALIZADO.items():
+                score = fuzz.ratio(trecho, termo_catalogo)
                 if score > melhor_score and score >= 80.0:
                     melhor_score = score
                     tipo_encontrado = tipo

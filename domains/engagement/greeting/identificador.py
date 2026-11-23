@@ -9,7 +9,6 @@ from domains.engagement.greeting.catalogo import AlvoSaudacao
 from app.classificador import ClassificadorPai
 from app.eventos import falar
 
-sys.dont_write_bytecode = True
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent.parent
 MODELO_PATH = ROOT_DIR / "models" / "greeting" / "professor_saudacao.joblib"
@@ -35,7 +34,10 @@ def identificar_alvo(frase: str) -> tuple[AlvoSaudacao, float]:
     tradutor = ClassificadorPai.tradutor_compartilhado
     if tradutor is None:
         from sentence_transformers import SentenceTransformer
-        tradutor = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+        ClassificadorPai.tradutor_compartilhado = SentenceTransformer(
+            "paraphrase-multilingual-MiniLM-L12-v2"
+        )
+        tradutor = ClassificadorPai.tradutor_compartilhado
 
     vetor = tradutor.encode([frase], show_progress_bar=False)
     probs = _modelo.predict_proba(vetor)[0]

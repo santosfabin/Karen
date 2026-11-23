@@ -8,7 +8,6 @@ from rapidfuzz import fuzz
 from domains.informational.system_status.catalogo import CATALOGO_REGRAS_STATUS, AlvoStatus
 from app.eventos import falar
 
-sys.dont_write_bytecode = True
 
 MAPEAMENTO_TOOLS = {
     AlvoStatus.HORA: "domains.informational.system_status.tools.hora",
@@ -26,6 +25,11 @@ def _remover_acentos(texto: str) -> str:
     return "".join([c for c in nfkd if not unicodedata.combining(c)]).lower()
 
 
+CATALOGO_NORMALIZADO = {
+    _remover_acentos(termo): alvo for termo, alvo in CATALOGO_REGRAS_STATUS.items()
+}
+
+
 def identificar_alvo(frase: str) -> AlvoStatus:
     frase_limpa = _remover_acentos(frase)
     palavras = frase_limpa.split()
@@ -37,8 +41,8 @@ def identificar_alvo(frase: str) -> AlvoStatus:
     for tamanho in range(len(palavras), 0, -1):
         for i in range(len(palavras) - tamanho + 1):
             trecho = " ".join(palavras[i : i + tamanho])
-            for termo_catalogo, alvo in CATALOGO_REGRAS_STATUS.items():
-                score = fuzz.ratio(trecho, _remover_acentos(termo_catalogo))
+            for termo_catalogo, alvo in CATALOGO_NORMALIZADO.items():
+                score = fuzz.ratio(trecho, termo_catalogo)
                 if score >= 80.0 and score > melhor_score:
                     melhor_score = score
                     alvo_encontrado = alvo

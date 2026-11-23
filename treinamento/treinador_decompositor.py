@@ -8,11 +8,10 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
-sys.dont_write_bytecode = True
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 CSV_PATH = ROOT_DIR / "dados" / "treinamento" / "dados_decompositor.csv"
-OUTPUT_DIR = ROOT_DIR / "models" / "decompositor"
+OUTPUT_DIR = ROOT_DIR / "models" / "decomposer"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 MODEL_OUT = OUTPUT_DIR / "modelo_karen.pt"
 
