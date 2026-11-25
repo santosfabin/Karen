@@ -163,3 +163,23 @@ Os três devem aparecer como ignorados.
 | STT | `faster-whisper` (modelo `small`) |
 | TTS | `kokoro-onnx` + ONNX/voices do Kokoro |
 | Áudio | `sounddevice`, `soundfile`, `pygame` |
+
+## Próximo passo: upgrade automático com feedback
+
+Hoje o ciclo de aprendizado é manual: alguém edita os CSVs em `dados/treinamento/` e roda `treinamento/treinar.py`. O próximo passo é fechar esse ciclo dentro do app.
+
+A Karen passa a observar o próprio uso e registrar dois casos:
+
+- **erro**: a intenção prevista não foi a que o usuário queria — correção explícita, tool pendente ou comando que não gerou ação;
+- **acerto com incerteza**: acertou, mas com confiança baixa ou margem pequena entre as duas classes mais prováveis.
+
+Para cada caso ela identifica **onde** a decisão saiu errada — decompositor, classificador pai, classificador filho, identificador do domínio ou tool — e salva a frase com o rótulo correto em um CSV de feedback, no mesmo formato já usado pelos treinadores.
+
+Na próxima execução de `treinamento/treinar.py`, esses exemplos entram junto com os dados originais e os modelos são regravados nos caminhos em inglês de `models/`. A ideia é que o ajuste já vá aplicado no treino seguinte, sem edição manual de planilha.
+
+Pendências para implementar:
+
+- definir o sinal de correção do usuário (frase de correção ou confirmação explícita);
+- definir os limiares de confiança/margem que caracterizam incerteza;
+- escolher o esquema do CSV de feedback por camada;
+- evitar que a mesma frase seja reforçada várias vezes seguidas.
